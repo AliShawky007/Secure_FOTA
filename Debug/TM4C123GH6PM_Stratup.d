@@ -1,0 +1,3 @@
+# FIXED
+
+TM4C123GH6PM_Stratup.o: ../TM4C123GH6PM_Stratup.c

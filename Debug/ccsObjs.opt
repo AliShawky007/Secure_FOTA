@@ -1,0 +1,5 @@
+"./TM4C123GH6PM_Stratup.o"
+"./main.o"
+"./MCAL/FLS/Fls.o"
+"./MCAL/FLS/Fls_Cfg.o"
+"../tm4c123gh6pm.cmd"

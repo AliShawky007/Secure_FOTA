@@ -1,0 +1,166 @@
+******************************************************************************
+            TI ARM Clang Linker PC v3.2.2                      
+******************************************************************************
+>> Linked Sat Nov 30 13:03:52 2024
+
+OUTPUT FILE NAME:   <Secue_FOTA.out>
+ENTRY POINT SYMBOL: "_c_int00_noinit_noargs"  address: 000002e5
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00040000  0000032a  0003fcd6  R  X
+  SRAM                  20000000   00008000  00000800  00007800  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    0000032a   0000032a    r-x
+  00000000    00000000    0000026c   0000026c    r-- .intvecs
+  0000026c    0000026c    000000be   000000be    r-x .text
+20000000    20000000    00000800   00000000    rw-
+  20000000    20000000    00000800   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    0000026c     
+                  00000000    0000026c     TM4C123GH6PM_Stratup.o (.intvecs)
+
+.text      0    0000026c    000000be     
+                  0000026c    00000078     main.o (.text.main)
+                  000002e4    0000002c     libc.a : boot_cortex_m.c.obj (.text:_c_int00_noinit_noargs)
+                  00000310    00000006     TM4C123GH6PM_Stratup.o (.text.ResetISR)
+                  00000316    00000004     libc.a : pre_init.c.obj (.text._system_pre_init)
+                  0000031a    00000004            : exit.c.obj (.text:abort)
+                  0000031e    00000002     --HOLE-- [fill = 0]
+                  00000320    00000002     TM4C123GH6PM_Stratup.o (.text.FaultISR)
+                  00000322    00000002     --HOLE-- [fill = 0]
+                  00000324    00000002     TM4C123GH6PM_Stratup.o (.text.IntDefaultHandler)
+                  00000326    00000002     --HOLE-- [fill = 0]
+                  00000328    00000002     TM4C123GH6PM_Stratup.o (.text.NmiSR)
+
+.cinit     0    00000000    00000000     
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.stack     0    20000000    00000800     UNINITIALIZED
+                  20000000    00000004     libc.a : boot_cortex_m.c.obj (.stack)
+                  20000004    000007fc     --HOLE--
+
+__llvm_prf_cnts 
+*          0    20000000    00000000     UNINITIALIZED
+
+__llvm_prf_bits 
+*          0    20000000    00000000     UNINITIALIZED
+
+MODULE SUMMARY
+
+       Module                   code   ro data   rw data
+       ------                   ----   -------   -------
+    .\
+       TM4C123GH6PM_Stratup.o   12     620       0      
+       main.o                   120    0         0      
+    +--+------------------------+------+---------+---------+
+       Total:                   132    620       0      
+                                                        
+    C:\ti\ccs1270\ccs\tools\compiler\ti-cgt-armllvm_3.2.2.LTS\lib\armv7em-ti-none-eabihf/c/libc.a
+       boot_cortex_m.c.obj      44     0         0      
+       exit.c.obj               4      0         0      
+       pre_init.c.obj           4      0         0      
+    +--+------------------------+------+---------+---------+
+       Total:                   52     0         0      
+                                                        
+       Stack:                   0      0         2048   
+    +--+------------------------+------+---------+---------+
+       Grand Total:             184    620       2048   
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                    
+-------   ----                    
+0000031a  C$$EXIT                 
+00000311  ResetISR                
+20000800  __STACK_END             
+00000800  __STACK_SIZE            
+20000200  __STACK_TOP             
+00000000  __TI_ATRegion0_region_sz
+00000000  __TI_ATRegion0_src_addr 
+00000000  __TI_ATRegion0_trg_addr 
+00000000  __TI_ATRegion1_region_sz
+00000000  __TI_ATRegion1_src_addr 
+00000000  __TI_ATRegion1_trg_addr 
+00000000  __TI_ATRegion2_region_sz
+00000000  __TI_ATRegion2_src_addr 
+00000000  __TI_ATRegion2_trg_addr 
+00000000  __TI_CINIT_Base         
+00000000  __TI_CINIT_Limit        
+00000000  __TI_CINIT_Warm         
+ffffffff  __TI_pprof_out_hndl     
+ffffffff  __TI_prof_data_size     
+ffffffff  __TI_prof_data_start    
+00000000  __TI_static_base__      
+ffffffff  __binit__               
+UNDEFED   __mpu_init              
+20000000  __stack                 
+20000000  __start___llvm_prf_bits 
+20000000  __start___llvm_prf_cnts 
+20000000  __stop___llvm_prf_bits  
+20000000  __stop___llvm_prf_cnts  
+000002e5  _c_int00_noinit_noargs  
+00000317  _system_pre_init        
+0000031b  abort                   
+ffffffff  binit                   
+00000000  g_pfnVectors            
+0000026d  main                    
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                    
+-------   ----                    
+00000000  __TI_ATRegion0_region_sz
+00000000  __TI_ATRegion0_src_addr 
+00000000  __TI_ATRegion0_trg_addr 
+00000000  __TI_ATRegion1_region_sz
+00000000  __TI_ATRegion1_src_addr 
+00000000  __TI_ATRegion1_trg_addr 
+00000000  __TI_ATRegion2_region_sz
+00000000  __TI_ATRegion2_src_addr 
+00000000  __TI_ATRegion2_trg_addr 
+00000000  __TI_CINIT_Base         
+00000000  __TI_CINIT_Limit        
+00000000  __TI_CINIT_Warm         
+00000000  __TI_static_base__      
+00000000  g_pfnVectors            
+0000026d  main                    
+000002e5  _c_int00_noinit_noargs  
+00000311  ResetISR                
+00000317  _system_pre_init        
+0000031a  C$$EXIT                 
+0000031b  abort                   
+00000800  __STACK_SIZE            
+20000000  __stack                 
+20000000  __start___llvm_prf_bits 
+20000000  __start___llvm_prf_cnts 
+20000000  __stop___llvm_prf_bits  
+20000000  __stop___llvm_prf_cnts  
+20000200  __STACK_TOP             
+20000800  __STACK_END             
+ffffffff  __TI_pprof_out_hndl     
+ffffffff  __TI_prof_data_size     
+ffffffff  __TI_prof_data_start    
+ffffffff  __binit__               
+ffffffff  binit                   
+UNDEFED   __mpu_init              
+
+[34 symbols]
